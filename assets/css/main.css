@@ -1,0 +1,47 @@
+
+  .mbutton {
+    position: relative;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: #b537f2;
+    
+    border: none;
+    color: white;
+   
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    margin: 5px;
+
+  }
+  .mbutton span {
+    position: relative;
+    pointer-events: none;
+  }
+  .mbutton::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, #1064a8, transparent);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-10%, -30%);
+    transition: width .2s ease, height .2s ease;
+  }
+  .mbutton:hover::before {
+    --size: 400px;
+  }
+
+  .ss {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#b537f2, #1064a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  
+
